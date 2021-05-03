@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "148157594215",
+    "project_id": "androidds-7bfc2",
+    "storage_bucket": "androidds-7bfc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148157594215:android:e2a62483e39326c6c872c2",
+        "android_client_info": {
+          "package_name": "com.kefi.aziz.androidds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148157594215-1uio1k8ppjptdk9nj3atjdae1r27q3df.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Y0M9Kev2XV2GVVd-eamldHOshyuYj4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148157594215-1uio1k8ppjptdk9nj3atjdae1r27q3df.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
