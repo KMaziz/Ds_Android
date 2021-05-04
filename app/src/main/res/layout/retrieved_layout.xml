@@ -69,7 +69,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="#ba6056"
                         android:gravity="center"
-                        android:text="June 15, 2021"
+                        android:text="date"
                         android:padding="5dp"
                         android:textSize="15sp"
                />

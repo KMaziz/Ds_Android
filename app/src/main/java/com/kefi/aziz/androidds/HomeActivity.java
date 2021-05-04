@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -46,11 +47,12 @@ public class HomeActivity extends AppCompatActivity {
 
     private ProgressDialog loader;
 
+
+
     private String key = "";
     private String task;
     private String date;
     private String description;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,81 +89,10 @@ public class HomeActivity extends AppCompatActivity {
 
     //function that adds a task and upload to Firebase
     private void addTask() {
-        AlertDialog.Builder myDialog = new AlertDialog.Builder(this); //create a alert dialog
-        LayoutInflater inflater = LayoutInflater.from(this);
+        FragmentManager fm = getSupportFragmentManager();
+        AddToDo editNameDialogFragment = AddToDo.newInstance("Add a new task");
+        editNameDialogFragment.show(fm, "fragment_edit_name");
 
-        //use the input_file layout as the view
-        View myView = inflater.inflate(R.layout.input_file, null);
-        myDialog.setView(myView);
-
-        final AlertDialog dialog = myDialog.create();
-        dialog.setCancelable(false); //touch outside doesn't cancel
-
-        //mke a round-corner dialog
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        //initialize the texts and btns
-        final EditText task = myView.findViewById(R.id.task);
-        final EditText description = myView.findViewById(R.id.description);
-        final EditText date = myView.findViewById(R.id.date);
-
-        Button save = myView.findViewById(R.id.saveBtn);
-        Button cancel = myView.findViewById(R.id.CancelBtn);
-
-        //if the user clicks cancel button
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
-        //if the user clicks save button
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String mTask = task.getText().toString().trim();
-                String mDescription = description.getText().toString().trim();
-                String mdate = date.getText().toString().trim();
-                String id = reference.push().getKey();//get the key for each data set
-
-//                String date = DateFormat.getDateInstance().format(new Date());
-
-                if (TextUtils.isEmpty(mTask)) {
-                    task.setError("Task Required");
-                    return;
-                }
-                if (TextUtils.isEmpty(mDescription)) {
-                    description.setError("Description Required");
-                    return;
-                } else {
-                    loader.setMessage("Adding your task");
-                    loader.setCanceledOnTouchOutside(false);
-                    loader.show();
-
-                    //use the Model class to pack up the data
-                    Model model = new Model(mTask, mDescription, id, mdate);
-                    //update the data to Firebase
-                    reference.child(id).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(HomeActivity.this, "Task has been inserted successfully", Toast.LENGTH_SHORT).show();
-                            } else {
-                                String error = task.getException().toString();
-                                Toast.makeText(HomeActivity.this, "Failed: " + error, Toast.LENGTH_SHORT).show();
-                            }
-                            loader.dismiss();
-                        }
-                    });
-
-                }
-
-                dialog.dismiss();
-            }
-        });
-
-        dialog.show();//show the dialog
     }
 
     @Override
@@ -185,7 +116,7 @@ public class HomeActivity extends AppCompatActivity {
                         description = model.getDescription();
                         date = model.getDate();
 
-                        updateTask();
+                        updateTask(key,task,description,date);
                     }
                 });
 
@@ -227,80 +158,12 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-    private void updateTask(){
-        AlertDialog.Builder myDialog = new AlertDialog.Builder(this);
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View view = inflater.inflate(R.layout.update_data, null);
-        myDialog.setView(view);
+    private void updateTask(String key, String task, String description, String date ){
 
-        AlertDialog dialog = myDialog.create();
+        FragmentManager fm = getSupportFragmentManager();
+        UpdateToDo update_a_task = UpdateToDo.newInstance(key,task,description,date);
+        update_a_task.show(fm, "fragment_update");
 
-        //make the corner round
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        EditText mTask = view.findViewById(R.id.mEditedTask);
-        EditText mDescription = view.findViewById(R.id.mEditedDescription);
-        EditText mDate = view.findViewById(R.id.mEditedDate);
-
-        mTask.setText(task);
-        mTask.setSelection(task.length());
-
-        mDescription.setText(description);
-        mDescription.setSelection(description.length());
-
-        mDate.setText(date);
-        mDate.setSelection(date.length());
-
-        Button deleteBtn = view.findViewById(R.id.btnDelete);
-        Button updateBtn = view.findViewById(R.id.btnUpdate);
-
-        updateBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                task = mTask.getText().toString().trim();
-                description = mDescription.getText().toString().trim();
-                date = mDate.getText().toString().trim();
-
-//                String date = DateFormat.getDateInstance().format(new Date());
-
-                Model model = new Model(task, description, key, date);
-
-                reference.child(key).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(HomeActivity.this, "Task has been updated successfully", Toast.LENGTH_SHORT).show();
-                        } else{
-                            String error = task.getException().toString();
-                            Toast.makeText(HomeActivity.this, "Update failed" + error, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-                dialog.dismiss();
-            }
-        });
-
-        deleteBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                reference.child(key).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(HomeActivity.this, "Task has been deleted successfully", Toast.LENGTH_SHORT).show();
-                        } else{
-                            String error = task.getException().toString();
-                            Toast.makeText(HomeActivity.this, "Delete failed" + error, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-                dialog.dismiss();
-            }
-        });
-
-        dialog.show();
     }
 
     //set up the log out function
