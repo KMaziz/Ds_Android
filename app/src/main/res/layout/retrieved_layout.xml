@@ -9,7 +9,7 @@
     android:layout_marginBottom="12dp"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
-    android:background="@drawable/background_retrieved">
+   >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,8 +53,7 @@
                         android:textStyle="bold"
                         android:padding="5dp"
                         android:maxLines="1"
-                        android:textColor="@color/myblack"
-                        android:fontFamily="@font/basic"/>
+        />
 
 
                 </RelativeLayout>
@@ -73,7 +72,7 @@
                         android:text="June 15, 2021"
                         android:padding="5dp"
                         android:textSize="15sp"
-                        android:fontFamily="@font/basic" />
+               />
 
 
                 </RelativeLayout>
@@ -92,7 +91,7 @@
                 android:textSize="15sp"
                 android:maxLines="3"
                 android:padding="5dp"
-                android:fontFamily="@font/basic"/>
+        />
         </LinearLayout>
 
     </LinearLayout>
