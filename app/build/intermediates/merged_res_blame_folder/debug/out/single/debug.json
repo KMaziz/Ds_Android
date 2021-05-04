@@ -32,6 +32,10 @@
         "source": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
         "merged": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -58,6 +62,10 @@
     {
         "merged": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registration.xml.flat",
+        "source": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\src\\main\\res\\layout\\activity_registration.xml"
     },
     {
         "merged": "C:\\Users\\kefia\\AndroidStudioProjects\\AndroidDS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

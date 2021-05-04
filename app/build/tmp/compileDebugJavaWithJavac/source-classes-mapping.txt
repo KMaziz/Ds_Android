@@ -1,4 +1,0 @@
-com/kefi/aziz/androidds/BuildConfig.java
- com.kefi.aziz.androidds.BuildConfig
-com/kefi/aziz/androidds/MainActivity.java
- com.kefi.aziz.androidds.MainActivity
