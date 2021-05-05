@@ -1,5 +1,6 @@
 package com.kefi.aziz.androidds;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,10 +23,15 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class AddToDo extends DialogFragment {
 
     private DatabaseReference reference;
     private FirebaseAuth mAuth;
+    final Calendar myCalendar = Calendar.getInstance();
 
     private FirebaseUser mUser;
     public AddToDo() {
@@ -53,15 +60,37 @@ public class AddToDo extends DialogFragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.input_file, container);
     }
-
+     EditText date;
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // Get field from view
         final EditText task = view.findViewById(R.id.task);
         final EditText description = view.findViewById(R.id.description);
-        final EditText date = view.findViewById(R.id.date);
+        date = view.findViewById(R.id.date);
+        DatePickerDialog.OnDateSetListener dates = new DatePickerDialog.OnDateSetListener() {
 
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+        date.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(getContext(), dates, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
         Button save = view.findViewById(R.id.saveBtn);
         Button cancel = view.findViewById(R.id.CancelBtn);
 
@@ -121,5 +150,11 @@ public class AddToDo extends DialogFragment {
             }
         });
 
+    }
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.FRANCE);
+
+        date.setText(sdf.format(myCalendar.getTime()));
     }
     }

@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Details"
+
             android:layout_margin="10dp"
             android:textSize="16dp"
             app:backgroundTint='#a9adb0'/>
@@ -48,6 +49,7 @@
             android:layout_height="wrap_content"
             android:hint="Time"
             android:layout_margin="10dp"
+            android:focusable="false"
             android:textSize="16dp"
             app:backgroundTint='#a9adb0'/>
 

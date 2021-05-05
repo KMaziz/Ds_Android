@@ -49,6 +49,8 @@
             android:hint="Time"
             android:layout_margin="10dp"
             android:textSize="16dp"
+            android:focusable="false"
+            android:inputType="date"
             app:backgroundTint='#a9adb0'/>
 
 

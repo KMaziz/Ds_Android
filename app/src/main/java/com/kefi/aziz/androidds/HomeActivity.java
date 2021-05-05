@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+import android.animation.Animator;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -24,6 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +40,6 @@ import com.google.firebase.database.FirebaseDatabase;
 public class HomeActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private FloatingActionButton floatingActionButton;
 
     private DatabaseReference reference;
     private FirebaseAuth mAuth;
@@ -46,13 +47,15 @@ public class HomeActivity extends AppCompatActivity {
     private String onlineUserID;
 
     private ProgressDialog loader;
-
+    FloatingActionButton fab, fab2, fab3;
+    LinearLayout  fabLayout2, fabLayout3;
 
 
     private String key = "";
     private String task;
     private String date;
     private String description;
+    private boolean isFABOpen =false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,13 +78,38 @@ public class HomeActivity extends AppCompatActivity {
         mUser = mAuth.getCurrentUser();
         onlineUserID = mUser.getUid();
         reference = FirebaseDatabase.getInstance().getReference().child("tasks").child(onlineUserID);
+        fabLayout2 = (LinearLayout) findViewById(R.id.fabLayout2);
+        fabLayout3 = (LinearLayout) findViewById(R.id.fabLayout3);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!isFABOpen) {
+                    showFABMenu();
+                } else {
+                    closeFABMenu();
+                }
+            }
+        });
 
 
-        floatingActionButton = findViewById(R.id.fab);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+
+
+        fab3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addTask();
+            }
+        });
+
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -166,23 +194,55 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    //set up the log out function
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return super.onCreateOptionsMenu(menu);
+
+
+
+    private void showFABMenu() {
+        isFABOpen = true;
+        fabLayout2.setVisibility(View.VISIBLE);
+        fabLayout3.setVisibility(View.VISIBLE);
+        fab.animate().rotationBy(180);
+        fabLayout2.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
+        fabLayout3.animate().translationY(-getResources().getDimension(R.dimen.standard_100));
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.logout:
-                mAuth.signOut();
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
-        }
-        return super.onOptionsItemSelected(item);
+    private void closeFABMenu() {
+        isFABOpen = false;
+        fab.animate().rotation(0);
+        fabLayout2.animate().translationY(0);
+        fabLayout3.animate().translationY(0);
+        fabLayout3.animate().translationY(0).setListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+                if (!isFABOpen) {
+                    fabLayout2.setVisibility(View.GONE);
+                    fabLayout3.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+
+            }
+        });
     }
+    @Override
+    public void onBackPressed() {
+        if (isFABOpen) {
+            closeFABMenu();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
 }

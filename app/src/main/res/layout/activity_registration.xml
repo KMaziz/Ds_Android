@@ -5,9 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegistrationActivity"
-    android:orientation="vertical"
->
+    android:background="@drawable/background"
 
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Registration"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:gravity="center_horizontal" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="38dp"
+        android:textColorHint="#666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/firstname"
@@ -18,10 +38,22 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:drawablePadding="10dp"
-
-        android:hint="Enter fisrt name"
+        android:background="@drawable/round_edittext"
+        android:translationY="4dp"
+        android:singleLine="true"
+        android:textColorHint="#111"
+        android:textSize="18sp"
+        android:hint="fisrt name"
         android:inputType="textEmailAddress"
         android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/lastname"
@@ -32,10 +64,21 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:drawablePadding="10dp"
-
-        android:hint="Enter last name"
+        android:background="@drawable/round_edittext"
+        android:translationY="4dp"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:hint="last name"
         android:inputType="textEmailAddress"
         android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#777"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/dateofBirth"
@@ -47,55 +90,91 @@
         android:layout_marginBottom="10dp"
         android:drawablePadding="10dp"
         android:padding="10dp"
-        android:hint="Enter date of birth"
-        android:inputType="date" />
+        android:focusable="false"
+        android:hint="date of birth"
+        android:background="@drawable/round_edittext"
 
-    <EditText
+        android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#777"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
         android:id="@+id/RegistrationEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
         android:drawablePadding="10dp"
+        android:background="@drawable/round_edittext"
 
-        android:hint="Enter Email"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#777"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Password"
+        android:hint="Password"
         android:layout_margin="10dp"
-
+        android:background="@drawable/round_edittext"
+        android:translationY="4dp"
+        android:singleLine="true"
+        android:textSize="18sp"
         android:drawablePadding="10dp"
         android:inputType="textPassword"
         android:padding="10dp"
        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#777"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <EditText
         android:id="@+id/password2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="repeat Password"
+        android:hint="repeated Password"
         android:layout_margin="10dp"
-
+        android:background="@drawable/round_edittext"
+        android:translationY="4dp"
+        android:singleLine="true"
+        android:textSize="18sp"
         android:drawablePadding="10dp"
         android:inputType="textPassword"
         android:padding="10dp"
         />
-
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/RegistrationButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
         android:textAllCaps="false"
         android:layout_margin="10dp"
         android:textColor="#000"
-
+        android:layout_gravity="center"
+        android:background="@drawable/registre_btn"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
         android:textSize="17sp"/>
     <TextView
         android:id="@+id/RegistrationPageQuestion"

@@ -1,16 +1,20 @@
 com/kefi/aziz/androidds/UpdateToDo.java
  com.kefi.aziz.androidds.UpdateToDo
  com.kefi.aziz.androidds.UpdateToDo$1
- com.kefi.aziz.androidds.UpdateToDo$1$1
  com.kefi.aziz.androidds.UpdateToDo$2
- com.kefi.aziz.androidds.UpdateToDo$2$1
+ com.kefi.aziz.androidds.UpdateToDo$3
+ com.kefi.aziz.androidds.UpdateToDo$3$1
+ com.kefi.aziz.androidds.UpdateToDo$4
+ com.kefi.aziz.androidds.UpdateToDo$4$1
 com/kefi/aziz/androidds/BuildConfig.java
  com.kefi.aziz.androidds.BuildConfig
 com/kefi/aziz/androidds/RegistrationActivity.java
  com.kefi.aziz.androidds.RegistrationActivity
  com.kefi.aziz.androidds.RegistrationActivity$1
  com.kefi.aziz.androidds.RegistrationActivity$2
- com.kefi.aziz.androidds.RegistrationActivity$2$1
+ com.kefi.aziz.androidds.RegistrationActivity$3
+ com.kefi.aziz.androidds.RegistrationActivity$3$1
+ com.kefi.aziz.androidds.RegistrationActivity$4
 com/kefi/aziz/androidds/MainActivity.java
  com.kefi.aziz.androidds.MainActivity
  com.kefi.aziz.androidds.MainActivity$1
@@ -21,14 +25,28 @@ com/kefi/aziz/androidds/HomeActivity.java
  com.kefi.aziz.androidds.HomeActivity
  com.kefi.aziz.androidds.HomeActivity$1
  com.kefi.aziz.androidds.HomeActivity$2
- com.kefi.aziz.androidds.HomeActivity$2$1
+ com.kefi.aziz.androidds.HomeActivity$3
+ com.kefi.aziz.androidds.HomeActivity$4
+ com.kefi.aziz.androidds.HomeActivity$4$1
+ com.kefi.aziz.androidds.HomeActivity$5
  com.kefi.aziz.androidds.HomeActivity$MyViewHolder
 com/kefi/aziz/androidds/AddToDo.java
  com.kefi.aziz.androidds.AddToDo
  com.kefi.aziz.androidds.AddToDo$1
  com.kefi.aziz.androidds.AddToDo$2
- com.kefi.aziz.androidds.AddToDo$2$1
+ com.kefi.aziz.androidds.AddToDo$3
+ com.kefi.aziz.androidds.AddToDo$4
+ com.kefi.aziz.androidds.AddToDo$4$1
 com/kefi/aziz/androidds/User.java
  com.kefi.aziz.androidds.User
 com/kefi/aziz/androidds/Model.java
  com.kefi.aziz.androidds.Model
+com/kefi/aziz/androidds/ProfileActivity.java
+ com.kefi.aziz.androidds.ProfileActivity
+ com.kefi.aziz.androidds.ProfileActivity$1
+ com.kefi.aziz.androidds.ProfileActivity$2
+ com.kefi.aziz.androidds.ProfileActivity$3
+ com.kefi.aziz.androidds.ProfileActivity$4
+ com.kefi.aziz.androidds.ProfileActivity$4$1
+ com.kefi.aziz.androidds.ProfileActivity$4$2
+ com.kefi.aziz.androidds.ProfileActivity$5

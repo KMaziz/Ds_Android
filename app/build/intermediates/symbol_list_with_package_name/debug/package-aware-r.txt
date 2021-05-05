@@ -1250,6 +1250,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen browser_actions_context_menu_max_width
 dimen browser_actions_context_menu_min_padding
@@ -1314,6 +1316,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -1554,6 +1557,11 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen standard_100
+dimen standard_12
+dimen standard_145
+dimen standard_23
+dimen standard_55
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -1655,6 +1663,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1698,6 +1707,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable login_btn
+drawable logout_btn
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1730,6 +1741,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable registre_btn
+drawable round_edittext
+drawable row_background
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1873,6 +1887,7 @@ id date
 id dateTv
 id date_picker_actions
 id dateofBirth
+id dateofBirthedit
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -1905,6 +1920,7 @@ id easeInOut
 id easeOut
 id edit_query
 id elastic
+id emailedit
 id end
 id endToStart
 id end_padder
@@ -1914,12 +1930,17 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fab
+id fab2
+id fab3
+id fabLayout2
+id fabLayout3
 id fade
 id fill
 id fill_horizontal
 id fill_vertical
 id filled
 id firstname
+id firstnameedit
 id fitToContents
 id fixed
 id flip
@@ -1957,6 +1978,7 @@ id labelGroup
 id labeled
 id largeLabel
 id lastname
+id lastnameedit
 id layout
 id left
 id leftToRight
@@ -2149,6 +2171,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView1
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2178,6 +2202,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id updatebutton
 id useLogo
 id view_offset_helper
 id visible
@@ -2250,6 +2275,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
 layout activity_main
+layout activity_profile
 layout activity_registration
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

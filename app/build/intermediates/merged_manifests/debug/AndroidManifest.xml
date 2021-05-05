@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity android:name="com.kefi.aziz.androidds.ProfileActivity" />
         <activity android:name="com.kefi.aziz.androidds.HomeActivity" />
         <activity android:name="com.kefi.aziz.androidds.RegistrationActivity" />
         <activity android:name="com.kefi.aziz.androidds.MainActivity" >

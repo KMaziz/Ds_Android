@@ -3,6 +3,7 @@ package com.kefi.aziz.androidds;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -33,7 +39,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private Button btnsignup;
     private TextView text;
     private FirebaseAuth mAuth;
-
+    final Calendar myCalendar = Calendar.getInstance();
     private ProgressDialog loader;
 
     @Override
@@ -55,7 +61,16 @@ public class RegistrationActivity extends AppCompatActivity {
         btnsignup =(Button) findViewById(R.id.RegistrationButton);
         text = (TextView) findViewById(R.id.RegistrationPageQuestion);
 
+        dateOfBirth.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(RegistrationActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +78,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,7 +154,25 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
     }
+    DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
+        @Override
+        public void onDateSet(DatePicker view, int year, int monthOfYear,
+                              int dayOfMonth) {
+            // TODO Auto-generated method stub
+            myCalendar.set(Calendar.YEAR, year);
+            myCalendar.set(Calendar.MONTH, monthOfYear);
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            updateLabel();
+        }
+
+    };
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.FRANCE);
+
+        dateOfBirth.setText(sdf.format(myCalendar.getTime()));
+    }
     @Override
     protected void onStart() {
         super.onStart();

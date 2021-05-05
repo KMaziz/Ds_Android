@@ -1,11 +1,12 @@
 package com.kefi.aziz.androidds;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,18 +21,23 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class UpdateToDo extends DialogFragment {
 
     private DatabaseReference reference;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
 
+    final Calendar myCalendar = Calendar.getInstance();
 
     private String key = "";
     private String task = " ";
     private String date= "";
     private String description = "";
-
+    String aaa ="";
     public UpdateToDo() {
         // Empty constructor is required for DialogFragment
         // Make sure not to add arguments to the constructor
@@ -65,13 +71,36 @@ public class UpdateToDo extends DialogFragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.update_data, container);
     }
-
+    EditText mDate;
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         EditText mTask =(EditText) view.findViewById(R.id.mEditedTask);
         EditText mDescription =(EditText) view.findViewById(R.id.mEditedDescription);
-        EditText mDate =(EditText) view.findViewById(R.id.mEditedDate);
+         mDate =(EditText) view.findViewById(R.id.mEditedDate);
+        DatePickerDialog.OnDateSetListener dates = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+        mDate.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(getContext(), dates, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
         key= getArguments().getString("key");
 
 
@@ -137,6 +166,11 @@ public class UpdateToDo extends DialogFragment {
                 dismiss();
             }
         });
+    }
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.FRANCE);
 
+        mDate.setText(sdf.format(myCalendar.getTime()));
     }
 }
