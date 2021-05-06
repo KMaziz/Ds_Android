@@ -51,6 +51,4 @@ d'abord, on a définit tous les FloatingActionButton au meme endroit pour qu'ils
 <br/>
 ## DatePicker
 <br/>
-pour the datePicker nous avons suivi [ça] (https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext “stackoverflow”)(c'est un lien pour question dans stackoverflow).
-
-
+pour the datePicker nous avons suivi [ça] (https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext "stackoverflow")(c'est un lien pour question dans stackoverflow).
