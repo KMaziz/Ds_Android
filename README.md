@@ -38,7 +38,10 @@
 <br/>
 le fichier google-services.json est inclus dans ce projet.
 <br/>
+<br/>
 ## design
+<br/>
+<br/>
 pour creer un design personnalisé de notre buttons et edittext on a creé des fichiers drawable.
 <br/>
 <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/drawble.PNG" width="300">
