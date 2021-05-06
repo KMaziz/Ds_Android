@@ -26,7 +26,7 @@
  &nbsp; &nbsp; &nbsp; &nbsp;tous les champs sont obligatoires pour l'inscription
  
 <br/>
- ### Add update remove task
+ ### add update & remove
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/ADD_update_task.gif" width="300">
  &nbsp; &nbsp; &nbsp; &nbsp; seulement le champs time n'est pas obligatoire.
  <br/>
