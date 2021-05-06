@@ -36,6 +36,18 @@
 ## base de données
 <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/db.PNG" width="300">
 le fichier google-services.json est inclus dans ce projet.
+<br/>
 ## design
 pour creer un design personnalisé de notre buttons et edittext on a creé des fichiers drawable.
 <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/drawble.PNG" width="300">
+<br/>
+## FloatingActionButton
+d'abord, on a définit tous les FloatingActionButton au meme endroit pour qu'ils se 'overlap'
+<br/> puis on a define tous les FloatingActionButton en class HomeActivity.java
+<br/> ensuite, on a utilisé animation (). TranslationY () pour animer les FloatingActionButton. pour qu'ils soient visible et overlap
+<br/> enfin on a override la methode onBackPressed() pour qu'on puisse 'overlap' les FloatingActionButton on cliquant sur onBack
+<br/>
+## DatePicker
+pour the datePicker nous avons suivi [ça] (https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext “stackoverflow”)(c'est un lien pour question dans stackoverflow).
+
+
