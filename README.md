@@ -1,11 +1,10 @@
 # Ds_Android
-• pour le ds de le module android on a creé ce mini projet qui est une application de 'todo'.
+[YouTube] (https://www.youtube.com “Youtube”)<br/>• pour le ds de le module android on a creé ce mini projet qui est une application de 'todo'.
 <br/>• cette mini application permet aux utilisateurs d'ajouter et mettre à jour une tache('task') avec le titre, les détails et la date
 <br/>• Toutes les données sont stockées dans une base de données en temps réel Firebase.
 <br/>• Cette application 'Todo' utilise l'authentification Firebase pour l'enregistrement et la connexion des utilisateurs.
 <br/>
 <br/>
-[YouTube] (https://www.youtube.com “Youtube”)
 - - -
 - - - 
 ### cette mini application contient :
