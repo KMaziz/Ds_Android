@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -99,12 +100,46 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
+                String email = ProfileActivity.this.email.getText().toString().trim();
+                String firstname = ProfileActivity.this.firstname.getText().toString().trim();
+                String lastname = ProfileActivity.this.lastname.getText().toString().trim();
+                String dateofbirth = ProfileActivity.this.dateofbirth.getText().toString().trim();
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+
+
+                if (TextUtils.isEmpty(firstname)){
+                    ProfileActivity.this.firstname.setError("First name is required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(lastname)){
+                    ProfileActivity.this.lastname.setError("last name is required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(dateofbirth)){
+                    ProfileActivity.this.dateofbirth.setError("Date of birth is required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(email)){
+                    ProfileActivity.this.email.setError("A valid email is required");
+                    return;
+                }
+                if (!email.matches(emailPattern))
+                {
+                    ProfileActivity.this.email.setError("Invalid email address");
+                    return;
+                }
+
+
 
 
 
                 FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
 
-                users.updateEmail(email.getText().toString().trim())
+                users.updateEmail(email)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
@@ -114,7 +149,7 @@ public class ProfileActivity extends AppCompatActivity {
                         });
 
 
-                User user = new User(firstname.getText().toString().trim(),lastname.getText().toString().trim(),dateofbirth.getText().toString().trim(),email.getText().toString().trim());
+                User user = new User(firstname.toString().trim(),lastname.toString().trim(),dateofbirth.toString().trim(),email.toString().trim());
                 reference.setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

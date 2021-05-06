@@ -8,7 +8,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 
 import android.widget.Button;
@@ -18,13 +17,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -89,6 +85,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 String firstname = RegistrationActivity.this.firstname.getText().toString().trim();
                 String lastname = RegistrationActivity.this.lastname.getText().toString().trim();
                 String dateofbirth = RegistrationActivity.this.dateOfBirth.getText().toString().trim();
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
 
 
@@ -110,6 +107,17 @@ public class RegistrationActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(email)){
                     RegistrationActivity.this.email.setError("A valid email is required");
                     return;
+                }
+                if (!email.matches(emailPattern))
+                {
+                    RegistrationActivity.this.email.setError("Invalid email address");
+                    return;
+                }
+                if(password.length()<6)
+                {
+                    RegistrationActivity.this.password.setError("more than 6");
+                    return;
+
                 }
                 if (TextUtils.isEmpty(password)){
                     RegistrationActivity.this.password.setError("A valid password is required");
