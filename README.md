@@ -21,21 +21,13 @@
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/screenshoots/registration.gif" width="300">
 &nbsp; &nbsp; &nbsp; &nbsp;
 <br>
-tous les champs sont obligatoires pour l'inscription
-verification sur tous les champs pour la validation
+tous les champs sont obligatoires pour l'inscription.
+<br>verification sur tous les champs pour la validation.
 <br/>
 ### add update & remove task
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/screenshoots/ADD_update_task.gif" width="300">
 &nbsp; &nbsp; &nbsp; &nbsp;
-<br>
-seulement le champ time n'est pas obligatoire.
-=======
-&nbsp; &nbsp; &nbsp; &nbsp;tous les champs sont obligatoires pour l'inscription
 <br/>
-### add update & remove task
-&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/screenshoots/ADD_update_task.gif" width="300">
-&nbsp; &nbsp; &nbsp; &nbsp;
-<br>
 seulement le champ time n'est pas obligatoire.
 <br/>
 ### edit profile & logout
