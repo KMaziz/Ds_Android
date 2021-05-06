@@ -20,8 +20,19 @@
  - - - 
  
 ## demo
- &nbsp;&nbsp; ##Registration
-&nbsp; &nbsp; <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/registration.gif" width="300">
-
-<br/> <br/>
+ &nbsp;&nbsp;
+ ### Registration
+&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/registration.gif" width="300">
+ &nbsp; &nbsp; &nbsp; &nbsp;tous les champs sont obligatoires pour l'inscription
+ 
+<br/>
+### add/update/remove task
+&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/ADD_update_task.gif" width="300">
+ &nbsp; &nbsp; &nbsp; &nbsp; seulement le champs time n'est pas obligatoire.
+ <br/>
+ 
+ ###edit profile & logout
+&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/profile.gif" width="300">
+ &nbsp; &nbsp; &nbsp; &nbsp; • le changement de mot de passe ce
+ <br/>
 google-services.json was added on github
