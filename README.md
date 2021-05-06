@@ -19,6 +19,7 @@
 &nbsp;&nbsp;
 ### Registration
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/registration.gif" width="300">
+<<<<<<< HEAD
 &nbsp; &nbsp; &nbsp; &nbsp;
 tous les champs sont obligatoires pour l'inscription
 verification sur tous les champs pour la validation
@@ -27,6 +28,13 @@ verification sur tous les champs pour la validation
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/ADD_update_task.gif" width="300">
 &nbsp; &nbsp; &nbsp; &nbsp;
 seulement le champ time n'est pas obligatoire.
+=======
+&nbsp; &nbsp; &nbsp; &nbsp;tous les champs sont obligatoires pour l'inscription
+<br/>
+### add update & remove task
+&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/ADD_update_task.gif" width="300">
+&nbsp; &nbsp; &nbsp; &nbsp; seulement le champ time n'est pas obligatoire.
+>>>>>>> be5c0eb8d04047f63dfcab77170c08aeca7ed27b
 <br/>
 ### edit profile & logout
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/profile.gif" width="300">
@@ -54,6 +62,10 @@ d'abord, on a définit tous les FloatingActionButton au meme endroit pour qu'ils
 <br/>Ce projet peut être amélioré par d'autres activités telles que la modification du mot de passe , du email , validation des tâches et des notifications...<br/>
 si vous avez des questions n'hésitez pas à me contacter, c'est la première fois que j'écris un fichier readme, j'espère qu'elle est bien redigé ,j'espère aussi que vous aimez cette mini application ,sinon vous pouvez choisir une autre dans mon github mais les application android dans mon git ne verifient pas les 4 conditions en meme temps.(au moins 3 activités,Au moins 1 fragment,Connexion avec une base de données Firebase,Un design acceptable).
 <br/>
+<<<<<<< HEAD
 - - -
+=======
+- - - 
+>>>>>>> be5c0eb8d04047f63dfcab77170c08aeca7ed27b
 <br/>
 © Kefi Med Aziz && Zribi Mariem
