@@ -35,14 +35,12 @@
 <br/>
 ## base de données
 <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/db.PNG" width="300">
-<br/>
-le fichier google-services.json est inclus dans ce projet.
-<br/>
-<br/>
-## design
+<br/>le fichier google-services.json est inclus dans ce projet.
 <br/>
 <br/>
-pour creer un design personnalisé de notre buttons et edittext on a creé des fichiers drawable.
+## Design
+<br/>
+<br/>pour creer un design personnalisé de notre buttons et edittext on a creé des fichiers drawable.
 <br/>
 <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/drawble.PNG" width="300">
 <br/>
