@@ -29,11 +29,13 @@
 <br/>
 ### edit profile & logout
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/profile.gif" width="300">
-&nbsp; &nbsp; &nbsp; &nbsp; • le changement de mot de passe et de l'email necessite une re-authenticattion donc on doit ajouter des autres activités pour le faire et comme nous avons atteint notre objectif qui est de développer : au moins 3 activités, Au moins 1 fragment, Connexion avec une base de données Firebase et un design acceptable  et c'est un MINI-projet on a decidé de n'est pas le faire.** la modification de l'email se fait au niveau de la base de données Firebase en temps réel et non de l'authentification Firebase.**  
+&nbsp; &nbsp; &nbsp; &nbsp;
+<br/>le changement de mot de passe et de l'email necessite une re-authenticattion donc on doit ajouter des autres activités pour le faire et comme nous avons atteint notre objectif qui est de développer : au moins 3 activités, Au moins 1 fragment, Connexion avec une base de données Firebase et un design acceptable  et c'est un MINI-projet on a decidé de n'est pas le faire.
+<br/>** la modification de l'email se fait au niveau de la base de données Firebase en temps réel et non de l'authentification Firebase. **  
 <br/>
 ## base de données
-<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/db.PNG" width="240">
-le fichier google-services.json est inclus dans ce projet
+<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/db.PNG" width="300">
+le fichier google-services.json est inclus dans ce projet.
 ## design
-pour le design on a creé les fichiers drawble 
-
+pour creer un design personnalisé de notre buttons et edittext on a creé des fichiers drawable.
+<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/drawble.PNG" width="300">
