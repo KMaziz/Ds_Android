@@ -21,7 +21,7 @@
  - - - 
  
 # Ds_Android
-&nbsp; &nbsp; <img align="top" src="https://user-images.githubusercontent.com/63463317/114272270-1c6a8d80-9a48-11eb-8a65-fecb4045081b.png" width="500">
+&nbsp; &nbsp; <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/registration.gif" width="500">
 
 <br/> <br/>
 google-services.json was added on github
