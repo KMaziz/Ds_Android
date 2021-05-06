@@ -13,25 +13,22 @@
  <br/>• Connexion avec une base de données Firebase pour sauvgarder les taches et les données des utlisateurs
  <br/>• connexion avec Firebase authentication pour le login
  <br/>• L'interface utilisateur est bien 'designed'
-
 <br/>
 <br/>
- - - -
- - - - 
+- - -
+- - - 
 ## demo
- &nbsp;&nbsp;
- ### Registration
+&nbsp;&nbsp;
+### Registration
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/registration.gif" width="300">
- &nbsp; &nbsp; &nbsp; &nbsp;tous les champs sont obligatoires pour l'inscription
+&nbsp; &nbsp; &nbsp; &nbsp;tous les champs sont obligatoires pour l'inscription
 <br/>
-
- ### add update & remove
+### add update & remove
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/ADD_update_task.gif" width="300">
- &nbsp; &nbsp; &nbsp; &nbsp; seulement le champs time n'est pas obligatoire.
- <br/>
- 
- ### edit profile & logout
+&nbsp; &nbsp; &nbsp; &nbsp; seulement le champs time n'est pas obligatoire.
+<br/>
+### edit profile & logout
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/profile.gif" width="300">
- &nbsp; &nbsp; &nbsp; &nbsp; • le changement de mot de passe ce
- <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; • le changement de mot de passe ce
+<br/>
 google-services.json was added on github
