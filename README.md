@@ -5,7 +5,6 @@
 <br/>• Cette application 'Todo' utilise l'authentification Firebase pour l'enregistrement et la connexion des utilisateurs.
 <br/>
 <br/>
-<br/>
 - - -
 - - - 
 ### cette mini application contient :
@@ -14,14 +13,15 @@
  <br/>• Connexion avec une base de données Firebase pour sauvgarder les taches et les données des utlisateurs
  <br/>• connexion avec Firebase authentication pour le login
  <br/>• L'interface utilisateur est bien 'designed'
- <br/>
+
 <br/>
 <br/>
  - - -
  - - - 
  
-# Ds_Android
-&nbsp; &nbsp; <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/registration.gif" width="500">
+## demo
+ &nbsp;&nbsp; ##Registration
+&nbsp; &nbsp; <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/registration.gif" width="300">
 
 <br/> <br/>
 google-services.json was added on github
