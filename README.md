@@ -31,7 +31,7 @@
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/profile.gif" width="300">
 &nbsp; &nbsp; &nbsp; &nbsp;
 <br/>le changement de mot de passe et de l'email necessite une re-authenticattion donc on doit ajouter des autres activités pour le faire et comme nous avons atteint notre objectif qui est de développer : au moins 3 activités, Au moins 1 fragment, Connexion avec une base de données Firebase et un design acceptable  et c'est un MINI-projet on a decidé de n'est pas le faire.
-<br/>** la modification de l'email se fait au niveau de la base de données Firebase en temps réel et non de l'authentification Firebase. **  
+<br/>** la modification de l'email se fait au niveau de la base de données Firebase en temps reel et non de l'authentification Firebase. **
 <br/>
 ## base de données
 <img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/db.PNG" width="300">
@@ -39,10 +39,9 @@
 <br/>
 <br/>
 ## Design
-<br/>
+<br/><img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/drawble.PNG" width="300">
 <br/>pour creer un design personnalisé de notre buttons et edittext on a creé des fichiers drawable.
 <br/>
-<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/drawble.PNG" width="300">
 <br/>
 ## FloatingActionButton
 d'abord, on a définit tous les FloatingActionButton au meme endroit pour qu'ils se 'overlap'
