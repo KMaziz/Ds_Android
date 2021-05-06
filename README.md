@@ -45,4 +45,4 @@ d'abord, on a définit tous les FloatingActionButton au meme endroit pour qu'ils
 <br/> enfin on a override la methode onBackPressed() pour qu'on puisse 'overlap' les FloatingActionButton on cliquant sur onBack
 <br/>
 ## DatePicker
-<br/>pour the datePicker nous avons suivi [ca] (https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext).
+<br/>pour the datePicker nous avons suivi [ca](https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext)
