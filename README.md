@@ -6,7 +6,6 @@
 <br/>
 <br/>
 - - -
-- - - 
 ### cette mini application contient :
  <br/>• 4 Activity
  <br/>• 2 fragments
@@ -16,7 +15,6 @@
 <br/>
 <br/>
 - - -
-- - - 
 ## demo
 &nbsp;&nbsp;
 ### Registration
@@ -48,14 +46,9 @@ d'abord, on a définit tous les FloatingActionButton au meme endroit pour qu'ils
 <br/>pour the datePicker nous avons suivi [ca](https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext).(stackoverflow question link).
 <br/>
 - - -
-<br/>
-# # NB :
-<br/>
-on a désacitivé l'email de confirmation qui est fournit par Firebase Authentication pour que vous ne pas perdre de temps en attendant le mail.
-vous pouvez aussi testé notre app en utlisiant ce mail : kefi.aziz@yahoo.fr et ce mot de passe :123456
-<br/>
-Ce projet peut être amélioré par d'autres activités telles que la modification du mot de passe , du email , validation des tâches et des notifications...
-<br/>
+<br># NB:
+<br/><br>on a désacitivé l'email de confirmation qui est fournit par Firebase Authentication pour que vous ne pas perdre de temps en attendant le mail.<br/>vous pouvez aussi testé notre app en utlisiant ce mail : kefi.aziz@yahoo.fr et ce mot de passe :123456
+<br/>Ce projet peut être amélioré par d'autres activités telles que la modification du mot de passe , du email , validation des tâches et des notifications...<br/>
 si vous avez des questions n'hésitez pas à me contacter, c'est la première fois que j'écris un fichier readme, j'espère qu'elle est bien redigé ,j'espère aussi que vous aimez cette mini application ,sinon vous pouvez choisir une autre dans mon github mais les application android dans mon git ne verifient pas les 4 conditions en meme temps.(au moins 3 activités,Au moins 1 fragment,Connexion avec une base de données Firebase,Un design acceptable).
 <br/>
 - - - 
