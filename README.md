@@ -26,12 +26,12 @@
  &nbsp; &nbsp; &nbsp; &nbsp;tous les champs sont obligatoires pour l'inscription
  
 <br/>
-### add/update/remove task
+ ### Add/update/remove task
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/ADD_update_task.gif" width="300">
  &nbsp; &nbsp; &nbsp; &nbsp; seulement le champs time n'est pas obligatoire.
  <br/>
  
- ###edit profile & logout
+ ### edit profile & logout
 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;<img align="top" src="https://github.com/KMaziz/Ds_Android/blob/main/profile.gif" width="300">
  &nbsp; &nbsp; &nbsp; &nbsp; • le changement de mot de passe ce
  <br/>
